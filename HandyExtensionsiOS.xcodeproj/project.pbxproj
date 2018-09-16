@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		17BA0A5E214E29D3004A1156 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BA0A5D214E29D3004A1156 /* AppDelegate.swift */; };
-		17BA0A60214E29D3004A1156 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BA0A5F214E29D3004A1156 /* ViewController.swift */; };
+		17BA0A60214E29D3004A1156 /* GradientLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BA0A5F214E29D3004A1156 /* GradientLoadingVC.swift */; };
 		17BA0A63214E29D3004A1156 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17BA0A61214E29D3004A1156 /* Main.storyboard */; };
 		17BA0A65214E29D4004A1156 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17BA0A64214E29D4004A1156 /* Assets.xcassets */; };
 		17BA0A68214E29D4004A1156 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17BA0A66214E29D4004A1156 /* LaunchScreen.storyboard */; };
+		17BA0A70214E2A5A004A1156 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BA0A6F214E2A5A004A1156 /* TableViewController.swift */; };
+		17BA0A72214E2C1C004A1156 /* StackViewHidingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BA0A71214E2C1C004A1156 /* StackViewHidingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		17BA0A5A214E29D3004A1156 /* HandyExtensionsiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandyExtensionsiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17BA0A5D214E29D3004A1156 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		17BA0A5F214E29D3004A1156 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		17BA0A5F214E29D3004A1156 /* GradientLoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingVC.swift; sourceTree = "<group>"; };
 		17BA0A62214E29D3004A1156 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17BA0A64214E29D4004A1156 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17BA0A67214E29D4004A1156 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17BA0A69214E29D4004A1156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17BA0A6F214E2A5A004A1156 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		17BA0A71214E2C1C004A1156 /* StackViewHidingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewHidingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				17BA0A5D214E29D3004A1156 /* AppDelegate.swift */,
-				17BA0A5F214E29D3004A1156 /* ViewController.swift */,
+				17BA0A6F214E2A5A004A1156 /* TableViewController.swift */,
+				17BA0A5F214E29D3004A1156 /* GradientLoadingVC.swift */,
+				17BA0A71214E2C1C004A1156 /* StackViewHidingVC.swift */,
 				17BA0A61214E29D3004A1156 /* Main.storyboard */,
 				17BA0A64214E29D4004A1156 /* Assets.xcassets */,
 				17BA0A66214E29D4004A1156 /* LaunchScreen.storyboard */,
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17BA0A60214E29D3004A1156 /* ViewController.swift in Sources */,
+				17BA0A60214E29D3004A1156 /* GradientLoadingVC.swift in Sources */,
+				17BA0A72214E2C1C004A1156 /* StackViewHidingVC.swift in Sources */,
+				17BA0A70214E2A5A004A1156 /* TableViewController.swift in Sources */,
 				17BA0A5E214E29D3004A1156 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
