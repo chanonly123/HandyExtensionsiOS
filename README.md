@@ -7,8 +7,8 @@ Collection of useful extension for extraordinary iOS projects.
 ![alt tag](https://github.com/chanonly123/HandyExtensionsiOS/blob/master/stack_demo.gif)
 
 ## Features
-- Gradient Loading animation
-- Animated hiding views inside UIStackView 
+- Gradient Loading Animation
+- Animated hiding subviews of UIStackView
 
 ## Runtime Requirements
 
@@ -18,6 +18,16 @@ Collection of useful extension for extraordinary iOS projects.
 ## Usage
 
 Just copy extensions you want
+
+### Gradient Loading animation
+`yourView.setLoading(Bool)`
+
+### UIStackView child hiding
+```
+// needs extra parameter to animate layout changes.
+// yourView must be imidiate subview of UIStackView.
+yourView.setHidden(true, layout: self.view)
+```
 
 ## Contributing
 
