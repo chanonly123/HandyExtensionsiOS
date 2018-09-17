@@ -1,6 +1,6 @@
 # HandyExtensions for iOS written in Swift
 
-Useful extension for extraordinary iOS projects.
+Collection of useful extension for extraordinary iOS projects. 
 
 ## []()
 ![alt tag](https://github.com/chanonly123/HandyExtensionsiOS/blob/master/grad_demo.gif)
@@ -25,5 +25,5 @@ Contributions are always welcome!
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
