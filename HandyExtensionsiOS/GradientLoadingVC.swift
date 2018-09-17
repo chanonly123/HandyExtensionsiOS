@@ -26,7 +26,8 @@ class GradientLoadingVC: UIViewController {
 }
 
 extension UIView {
-    func setLoading(_ enable: Bool, width: Double = 0.15) {
+    func setLoading(_ enable: Bool) {
+        let width: Double = 0.15
         clipsToBounds = true
         if enable {
             let colors: [UIColor] = [UIColor(white: 0.92, alpha: 1), UIColor(white: 0.95, alpha: 1), UIColor(white: 0.92, alpha: 1)]
@@ -38,7 +39,6 @@ extension UIView {
             gradient.endPoint = CGPoint(x: 1, y: 0)
             gradient.cornerRadius = layer.cornerRadius
             gradient.colors = colors.map { $0.cgColor }
-            
             
             let anim = (gradient.animation(forKey: "loading_layer_anim") as? CABasicAnimation) ?? CABasicAnimation(keyPath: "locations")
             anim.fromValue = [0, NSNumber(value: width), NSNumber(value: width * 2)]

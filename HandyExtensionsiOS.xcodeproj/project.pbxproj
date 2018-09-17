@@ -26,6 +26,7 @@
 		17BA0A69214E29D4004A1156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17BA0A6F214E2A5A004A1156 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		17BA0A71214E2C1C004A1156 /* StackViewHidingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewHidingVC.swift; sourceTree = "<group>"; };
+		17BAF835214EA16A00D5B730 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +44,7 @@
 			isa = PBXGroup;
 			children = (
 				17BA0A5C214E29D3004A1156 /* HandyExtensionsiOS */,
+				17BAF835214EA16A00D5B730 /* README.md */,
 				17BA0A5B214E29D3004A1156 /* Products */,
 			);
 			sourceTree = "<group>";
