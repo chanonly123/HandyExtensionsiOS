@@ -60,11 +60,12 @@ class ExtendedScrollingVC: UIViewController {
 extension ExtendedScrollingVC: UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         collectionView.visibleCells.forEach { cell in
-            if let cell = cell as? CollViewCell {
-                let moveX = (cell.index * scrollView.bounds.width) - scrollView.contentOffset.x
+            if let indexPath = collectionView.indexPath(for: cell), let cell = cell as? CollViewCell {
+                let index = CGFloat(indexPath.item)
+                let moveX = (index * scrollView.bounds.width) - scrollView.contentOffset.x
                 let ratioX = abs(moveX / scrollView.bounds.width)
                 
-                let moveY = (cell.index * scrollView.bounds.height) - scrollView.contentOffset.y
+                let moveY = (index * scrollView.bounds.height) - scrollView.contentOffset.y
                 let ratioY = abs(moveY / scrollView.bounds.height)
                 
                 print("moveX: \(moveX), ratioX: \(ratioX), moveY: \(moveY), ratioY: \(ratioY)")
@@ -110,7 +111,6 @@ extension ExtendedScrollingVC: UICollectionViewDataSource {
         cell.img2.image = arrImgs2[indexPath.item]
         cell.lbl1.text = arrLbl1[indexPath.item]
         cell.lbl2.text = arrLbl2[indexPath.item]
-        cell.index = CGFloat(indexPath.item)
         
         return cell
     }
@@ -139,7 +139,6 @@ class CollViewCell: UICollectionViewCell {
     @IBOutlet weak var img2: UIImageView!
     @IBOutlet weak var lbl1: UILabel!
     @IBOutlet weak var lbl2: UILabel!
-    var index: CGFloat = 0
 }
 
 fileprivate enum LayoutTypes: String {
