@@ -5,10 +5,12 @@ Collection of useful extension for extraordinary iOS projects.
 ## []()
 ![alt tag](https://github.com/chanonly123/HandyExtensionsiOS/blob/master/grad_demo.gif)
 ![alt tag](https://github.com/chanonly123/HandyExtensionsiOS/blob/master/stack_demo.gif)
+![alt tag](https://github.com/chanonly123/HandyExtensionsiOS/blob/master/extended_scroll.gif)
 
 ## Features
 - Gradient Loading Animation
 - Animated hiding subviews of UIStackView
+- Example for extended subview movement using easy scrollViewDidScroll method
 
 ## Runtime Requirements
 
@@ -28,6 +30,8 @@ Just copy extensions you want
 // yourView must be imidiate subview of UIStackView.
 yourView.setHidden(true, layout: self.view)
 ```
+### Extended Scrolling
+ Just override `scrollViewDidScroll` and apply some calculations (check example code).
 
 ## Contributing
 

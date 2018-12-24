@@ -11,10 +11,11 @@ import UIKit
 class TableViewController: UITableViewController {
     enum Rows: String {
         case gradientLoading = "Gradient loading animation",
-            stackViewHiding = "Stack View Hiding"
+            stackViewHiding = "Stack View Hiding",
+        extendedScrolling = "Extended scrolling"
     }
 
-    var array: [Rows] = [.gradientLoading, .stackViewHiding]
+    var array: [Rows] = [.gradientLoading, .stackViewHiding, .extendedScrolling]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,7 @@ class TableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return array.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -41,6 +42,8 @@ class TableViewController: UITableViewController {
             viewc = storyboard?.instantiateViewController(type: GradientLoadingVC.self)
         case .stackViewHiding:
             viewc = storyboard?.instantiateViewController(type: StackViewHidingVC.self)
+        case .extendedScrolling:
+            viewc = storyboard?.instantiateViewController(type: ExtendedScrollingVC.self)
         }
         if viewc != nil {
             self.show(viewc!, sender: self)

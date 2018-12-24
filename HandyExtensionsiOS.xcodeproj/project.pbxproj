@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1718080821CFB70B004E6D73 /* ExtendedScrollingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1718080721CFB70B004E6D73 /* ExtendedScrollingVC.swift */; };
 		17BA0A5E214E29D3004A1156 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BA0A5D214E29D3004A1156 /* AppDelegate.swift */; };
 		17BA0A60214E29D3004A1156 /* GradientLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BA0A5F214E29D3004A1156 /* GradientLoadingVC.swift */; };
 		17BA0A63214E29D3004A1156 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17BA0A61214E29D3004A1156 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1718080721CFB70B004E6D73 /* ExtendedScrollingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedScrollingVC.swift; sourceTree = "<group>"; };
 		17BA0A5A214E29D3004A1156 /* HandyExtensionsiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandyExtensionsiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17BA0A5D214E29D3004A1156 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17BA0A5F214E29D3004A1156 /* GradientLoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoadingVC.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				17BA0A6F214E2A5A004A1156 /* TableViewController.swift */,
 				17BA0A5F214E29D3004A1156 /* GradientLoadingVC.swift */,
 				17BA0A71214E2C1C004A1156 /* StackViewHidingVC.swift */,
+				1718080721CFB70B004E6D73 /* ExtendedScrollingVC.swift */,
 				17BA0A61214E29D3004A1156 /* Main.storyboard */,
 				17BA0A64214E29D4004A1156 /* Assets.xcassets */,
 				17BA0A66214E29D4004A1156 /* LaunchScreen.storyboard */,
@@ -147,6 +150,7 @@
 				17BA0A72214E2C1C004A1156 /* StackViewHidingVC.swift in Sources */,
 				17BA0A70214E2A5A004A1156 /* TableViewController.swift in Sources */,
 				17BA0A5E214E29D3004A1156 /* AppDelegate.swift in Sources */,
+				1718080821CFB70B004E6D73 /* ExtendedScrollingVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
