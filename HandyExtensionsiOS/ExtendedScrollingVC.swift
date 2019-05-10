@@ -18,6 +18,9 @@ class ExtendedScrollingVC: UIViewController {
     var arrLbl1: [String] = []
     var arrLbl2: [String] = []
     
+    var currPage = 0
+    var colors: [UIColor] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
@@ -31,17 +34,18 @@ class ExtendedScrollingVC: UIViewController {
         arrImgs1 = [#imageLiteral(resourceName: "Onboarding_screen1_background"), #imageLiteral(resourceName: "Onboarding_screen2_background"), #imageLiteral(resourceName: "Onboarding_screen3_background"), #imageLiteral(resourceName: "Onboarding_screen1_background"), #imageLiteral(resourceName: "Onboarding_screen2_background"), #imageLiteral(resourceName: "Onboarding_screen3_background")]
         arrImgs2 = [#imageLiteral(resourceName: "Onboarding_screen1_designelements"), #imageLiteral(resourceName: "Onboarding_screen2_designelements"), #imageLiteral(resourceName: "Onboarding_screen3_designelements"), #imageLiteral(resourceName: "Onboarding_screen1_designelements"), #imageLiteral(resourceName: "Onboarding_screen2_designelements"), #imageLiteral(resourceName: "Onboarding_screen3_designelements")]
         arrLbl2 = ["Be your true self and chat with strangers and enjoy unlimited fun with Poll, Play & much more", "Tap the answer out of 3 options in 10 seconds", "Play the game everyday and win", "Be your true self and chat with strangers and enjoy unlimited fun with Poll, Play & much more", "Tap the answer out of 3 options in 10 seconds", "Play the game everyday and win"]
+        colors = [.red, .blue, .green, .yellow, .purple, .orange]
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Types", style: .plain, target: self, action: #selector(switchTypes))
     }
     
     @objc func switchTypes() {
-        let sheet = UIAlertController(title: "Types", message: "Select type", preferredStyle: UIAlertControllerStyle.actionSheet)
-        sheet.addAction(UIAlertAction(title: LayoutTypes.horizontalScale.rawValue, style: UIAlertActionStyle.default, handler: { [weak self] _ in
+        let sheet = UIAlertController(title: "Types", message: "Select type", preferredStyle: UIAlertController.Style.actionSheet)
+        sheet.addAction(UIAlertAction(title: LayoutTypes.horizontalScale.rawValue, style: UIAlertAction.Style.default, handler: { [weak self] _ in
             self?.selectedType = LayoutTypes.horizontalScale
             self?.invalidateLayout(vertical: false)
         }))
-        sheet.addAction(UIAlertAction(title: LayoutTypes.verticalScale.rawValue, style: UIAlertActionStyle.default, handler: { [weak self] _ in
+        sheet.addAction(UIAlertAction(title: LayoutTypes.verticalScale.rawValue, style: UIAlertAction.Style.default, handler: { [weak self] _ in
             self?.selectedType = LayoutTypes.verticalScale
             self?.invalidateLayout(vertical: true)
         }))
@@ -96,6 +100,31 @@ extension ExtendedScrollingVC: UICollectionViewDelegate {
                 }
             }
         }
+        
+        // color change on scroll
+        let progress = scrollView.contentOffset.x / scrollView.bounds.width
+        let page = Int(progress)
+        if currPage != page { currPage = page }
+        let nextPage = Int(progress + 1)
+        let prog = 1 - (CGFloat(Int(progress + 1)) - progress)
+        print("\(currPage) \(nextPage) \(prog)")
+        if currPage >= 0 && currPage < colors.count && nextPage >= 0 && nextPage < colors.count {
+            let interColor = colorBetween(col1: colors[currPage], col2: colors[nextPage], percent: prog)
+            collectionView.backgroundColor = interColor.withAlphaComponent(0.5)
+        }
+    }
+    
+    // calculates intermediate color
+    func colorBetween(col1: UIColor, col2: UIColor, percent: CGFloat) -> UIColor {
+        let c1 = CIColor(color: col1)
+        let c2 = CIColor(color: col2)
+        
+        let alpha = (c2.alpha - c1.alpha) * percent + c1.alpha
+        let red = (c2.red - c1.red) * percent + c1.red
+        let blue = (c2.blue - c1.blue) * percent + c1.blue
+        let green = (c2.green - c1.green) * percent + c1.green
+        
+        return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
 }
 

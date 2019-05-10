@@ -10,7 +10,7 @@ Collection of useful extension for extraordinary iOS projects.
 ## Features
 - Gradient Loading Animation
 - Animated hiding subviews of UIStackView
-- Example for extended subview movement using easy scrollViewDidScroll method
+- Example for extended subview movement using easy scrollViewDidScroll method and Color change interactively on scroll
 
 ## Runtime Requirements
 

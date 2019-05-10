@@ -47,7 +47,7 @@ extension UIView {
             anim.fromValue = [0, NSNumber(value: width), NSNumber(value: width * 2)]
             anim.toValue = [NSNumber(value: 1 - width * 2), NSNumber(value: 1 - width), 1]
             anim.duration = 0.8
-            anim.fillMode = kCAFillModeForwards
+            anim.fillMode = CAMediaTimingFillMode.forwards
             anim.isRemovedOnCompletion = false
             anim.repeatCount = Float.greatestFiniteMagnitude
             gradient.add(anim, forKey: layerAnimName)
